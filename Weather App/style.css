@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("images/p2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    color: #333;
+    
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px); 
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #ff7e5f;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #ff7e5f;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #feb47b;
+}
+
+.weather-info {
+    margin-top: 20px;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.weather-info img {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.weather-info img:hover {
+    transform: scale(1.1);
+}
+
+.error-message {
+    color: red;
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input[type="text"], button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
